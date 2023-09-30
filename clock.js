@@ -123,6 +123,7 @@ function resetAlarm(){
     setAP.disabled=false;
     document.getElementById('setAlarm').disabled=false;
     document.getElementById('resetAlarm').disabled=true;
+    sound.pause();//to not ring the alarm since its cleared
     if(document.querySelector('.paraAlarm'))//to check if its already present
         subMainDiv.removeChild(document.querySelector('.paraAlarm'));// to remove the text added with alarm time
 }
