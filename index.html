@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alarm Clock</title>
+    <link href="clock.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        Lets Set Alarm
+      </header>
+      <br /><br />
+      <div class="subMain">
+        <!-- to show current timing -->
+        <div id="currentTimingDiv">
+        <h3>Current Timing: </h3>
+        <p id ="currentTiming"></p>
+        </div>
+        <!-- to set alarm -->
+        <h4>Set Alarm Timing</h4>
+        <div>
+          <select id="alarmHours" required>
+            <option value="" disabled selected hidden>Hour</option><!-- to show first elem, which is not selectable -->
+          </select>
+          <select id="alarmMins" required>
+            <option value="" disabled selected hidden>Minute</option>
+          </select>
+          <!-- <select id="alarmSec"></select> -->
+          <select id="amOrPm" required>
+            <option value="" disabled selected hidden>AM/PM</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <br>
+        <div class="buttons">
+        <button class="setAlarm" id="setAlarm" onclick="setAlarm()">
+          Set Alarm
+        </button>
+        <br>
+        <button class="resetAlarm" id="resetAlarm" onclick="resetAlarm()" disabled>
+          Reset Alarm
+        </button>
+      </div>
+      </div>
+    </div>
+    <script type='text/javascript' src="clock.js"></script>
+  </body>
+</html>
